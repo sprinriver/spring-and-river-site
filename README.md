@@ -27,6 +27,84 @@ assets/js/main.js       mobile nav, scroll reveal, contact-form mailto handoff
 assets/img/             logo and favicon (SVG)
 ```
 
+## Running it locally (Windows)
+
+### Quickest look — no tools needed
+
+Open the project folder in File Explorer and double-click `index.html`. It opens
+in your default browser and the whole site works: navigation, styling, fonts and
+anchor links. Nothing needs installing.
+
+This works because the site is plain files with no server-side code. The address
+bar will show `file:///C:/...` rather than `http://`, which is the one difference
+from how it behaves once published.
+
+### Proper local server — recommended while editing
+
+A local server matches how GitHub Pages actually serves the site. Use it if you
+are making real changes.
+
+Open **PowerShell** in the project folder — in File Explorer, hold **Shift**,
+right-click empty space in the folder, and choose *Open PowerShell window here*.
+(On Windows 11 choose *Open in Terminal*.)
+
+**If you have Python** (check with `python --version`):
+
+```powershell
+python -m http.server 8000
+```
+
+If `python` opens the Microsoft Store instead, use the Python launcher:
+
+```powershell
+py -m http.server 8000
+```
+
+**If you have Node.js instead** (check with `node --version`):
+
+```powershell
+npx serve .
+```
+
+Then open <http://localhost:8000/> in your browser. Press **Ctrl+C** in
+PowerShell to stop the server.
+
+If port 8000 is already in use, pick another — `python -m http.server 8080` —
+and browse to `http://localhost:8080/`.
+
+Neither Python nor Node installed? Get Python from
+<https://www.python.org/downloads/windows/> and tick **"Add python.exe to PATH"**
+during setup, or just use the double-click method above.
+
+### With live reload — nicest for design work
+
+Install [Visual Studio Code](https://code.visualstudio.com/), then the
+**Live Server** extension (by Ritwick Dey). Open the project folder in VS Code,
+right-click `index.html` in the sidebar and choose **Open with Live Server**.
+The browser now refreshes itself every time you save a file.
+
+### Seeing your CSS changes
+
+Browsers cache stylesheets aggressively. If an edit to `assets/css/styles.css`
+does not show up, hard-refresh with **Ctrl+F5** (or **Ctrl+Shift+R**).
+
+### Checking the mobile layout
+
+Press **F12** to open DevTools, then **Ctrl+Shift+M** to toggle the device
+toolbar and pick a phone size. Worth doing after any layout change — the page
+should never scroll sideways.
+
+### Publishing your changes
+
+```powershell
+git add -A
+git commit -m "Describe what you changed"
+git push
+```
+
+The GitHub Actions workflow redeploys the site automatically within a minute or
+two. Watch it under the repository's **Actions** tab.
+
 ## Editing
 
 **Colours and type** are CSS custom properties at the top of
