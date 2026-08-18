@@ -22,7 +22,7 @@ one small script. Edit a file, push, and it is live.
 
 ```
 assets/css/styles.css   dark editorial design system — colours live in :root custom properties
-assets/js/main.js       mobile nav, scroll reveal, contact-form mailto handoff
+assets/js/main.js       mobile nav, theme toggle, scroll reveal, contact-form mailto handoff
 assets/img/             logo and favicon (SVG)
 ```
 
@@ -107,8 +107,11 @@ two. Watch it under the repository's **Actions** tab.
 ## Editing
 
 **Colours and type** are CSS custom properties at the top of
-`assets/css/styles.css`. Changing `--blue-600` or `--amber` re-themes the whole
-site.
+`assets/css/styles.css`. Dark is the default theme; the light palette lives in
+the `[data-theme="light"]` block and the header toggle switches between them,
+persisting the choice in `localStorage`. Amber used *as text* goes through
+`--accent-text` (which darkens in light mode for contrast) — only backgrounds
+and bars use `--amber` directly.
 
 **Navigation and footer** are duplicated in the `<header>` / `<footer>` of each
 page. If you add a page, update those blocks in all eight files.

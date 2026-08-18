@@ -18,7 +18,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
-<script>document.documentElement.className += " js";</script>
+<script>
+document.documentElement.className += " js";
+try { if (localStorage.getItem("theme") === "light") document.documentElement.setAttribute("data-theme", "light"); } catch (e) {}
+</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -28,7 +31,6 @@
       <img class="brand__mark" src="assets/img/logo.svg" alt="" width="34" height="34">
       <span class="brand__name">Spring &amp; <em>River</em></span>
     </a>
-    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
     <nav class="nav" id="site-nav">
       <a href="index.html" aria-current="page">Home</a>
       <a href="services.html">Services</a>
@@ -37,6 +39,13 @@
       <a href="about.html">About</a>
       <a class="btn btn--primary header-cta" href="contact.html">Talk to us</a>
     </nav>
+    <div class="header-tools">
+      <button class="theme-toggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5 5l1.8 1.8M17.2 17.2 19 19M19 5l-1.8 1.8M6.8 17.2 5 19"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      </button>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    </div>
   </div>
 </header>
 <main id="main">
@@ -48,9 +57,9 @@
     <path d="M-20 170 C 280 110, 520 230, 780 170 S 1280 110, 1460 170" stroke="#FFCE1B" stroke-width="1" opacity=".35"/>
   </svg>
   <div class="wrap">
-    <span class="eyebrow reveal">AI &middot; ML &middot; Business Intelligence</span>
+    <span class="eyebrow reveal">Data Unification / Data Engineering / BI / AI &amp; ML / Agentic AI</span>
     <h1 class="reveal">Intelligence, engineered for <span class="accent">industry.</span></h1>
-    <p class="hero__lede reveal">We unify plant, quality and enterprise data, then put machine learning to work on the losses that matter &mdash; yield, energy, quality and downtime.</p>
+    <p class="hero__lede reveal">From sensor to decision: we unify plant, quality and enterprise data, then put machine learning to work on the losses that matter &mdash; yield, energy, quality, downtime.</p>
     <div class="hero__actions reveal">
       <a class="btn btn--primary" href="industries.html">Explore your industry <span class="btn__arrow">&rarr;</span></a>
       <a class="btn btn--ghost" href="services.html">What we do</a>
