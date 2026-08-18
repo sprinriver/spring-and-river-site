@@ -42,86 +42,63 @@
 <main id="main">
 <section class="hero">
   <div class="hero__glow" aria-hidden="true"></div>
+  <svg class="hero__art" viewBox="0 0 1440 190" fill="none" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M-20 120 C 240 60, 480 180, 740 120 S 1240 60, 1460 120" stroke="#1B4F9C" stroke-width="1.5" opacity=".55"/>
+    <path d="M-20 145 C 260 85, 500 205, 760 145 S 1260 85, 1460 145" stroke="#4187D1" stroke-width="1.2" opacity=".4"/>
+    <path d="M-20 170 C 280 110, 520 230, 780 170 S 1280 110, 1460 170" stroke="#FFCE1B" stroke-width="1" opacity=".35"/>
+  </svg>
   <div class="wrap">
-    <div class="hero__grid">
-      <div>
-        <span class="eyebrow">AI &middot; ML &middot; Business Intelligence</span>
-        <h1>Artificial Intelligence for <span class="accent">business advantage</span> on the factory floor.</h1>
-        <p class="hero__lede">We unify plant, quality and enterprise data, then put machine learning to work on the losses that matter &mdash; yield, energy, quality and downtime. Production-grade solutions, shipped to real peer-level workloads.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="industries.html">Explore your industry <span class="btn__arrow">&rarr;</span></a>
-          <a class="btn btn--ghost" href="services.html">See what we do</a>
-        </div>
-        <div class="hero__stats">
-          <div class="hero__stat"><b>6</b><span>Industry verticals</span></div>
-          <div class="hero__stat"><b>6</b><span>Countries served</span></div>
-          <div class="hero__stat"><b>30+</b><span>Yrs leadership experience</span></div>
-        </div>
-      </div>
-      <div class="pipeline reveal">
-        <div class="pipeline__title">From sensor to decision</div>
-        <div class="pipeline__step"><span class="pipeline__num">01</span><div><b>Acquire</b><small>PLC, SCADA, HMI, historians, instruments, LIMS &amp; ELN</small></div></div>
-        <div class="pipeline__step"><span class="pipeline__num">02</span><div><b>Unify</b><small>Timeseries convergence with ERP, CRM, SCM and MES records</small></div></div>
-        <div class="pipeline__step"><span class="pipeline__num">03</span><div><b>Model</b><small>Statistical, ML and vision models trained on your own history</small></div></div>
-        <div class="pipeline__step"><span class="pipeline__num">04</span><div><b>Act</b><small>Setpoints, alerts and guided remediation back to the line</small></div></div>
-      </div>
+    <span class="eyebrow reveal">AI &middot; ML &middot; Business Intelligence</span>
+    <h1 class="reveal">Intelligence, engineered for <span class="accent">industry.</span></h1>
+    <p class="hero__lede reveal">We unify plant, quality and enterprise data, then put machine learning to work on the losses that matter &mdash; yield, energy, quality and downtime.</p>
+    <div class="hero__actions reveal">
+      <a class="btn btn--primary" href="industries.html">Explore your industry <span class="btn__arrow">&rarr;</span></a>
+      <a class="btn btn--ghost" href="services.html">What we do</a>
+    </div>
+    <div class="hero__stats reveal">
+      <div class="hero__stat"><b>6</b><span>Industry verticals</span></div>
+      <div class="hero__stat"><b>6</b><span>Countries served</span></div>
+      <div class="hero__stat"><b>30<i>+</i></b><span>Yrs leadership experience</span></div>
+      <div class="hero__stat"><b>45</b><span>Documented use cases</span></div>
     </div>
   </div>
 </section>
+
+<div class="ticker" aria-label="Systems we integrate with">
+  <div class="ticker__track">
+    <span class="ticker__item">PLC</span><span class="ticker__item">SCADA</span><span class="ticker__item">HMI</span>
+    <span class="ticker__item">Plant Historian</span><span class="ticker__item">MES</span><span class="ticker__item">LIMS</span>
+    <span class="ticker__item">ELN</span><span class="ticker__item">ERP / D365</span><span class="ticker__item">CRM</span>
+    <span class="ticker__item">SCM</span><span class="ticker__item">Power BI</span><span class="ticker__item">IoT / Edge</span>
+    <span class="ticker__item" aria-hidden="true">PLC</span><span class="ticker__item" aria-hidden="true">SCADA</span><span class="ticker__item" aria-hidden="true">HMI</span>
+    <span class="ticker__item" aria-hidden="true">Plant Historian</span><span class="ticker__item" aria-hidden="true">MES</span><span class="ticker__item" aria-hidden="true">LIMS</span>
+    <span class="ticker__item" aria-hidden="true">ELN</span><span class="ticker__item" aria-hidden="true">ERP / D365</span><span class="ticker__item" aria-hidden="true">CRM</span>
+    <span class="ticker__item" aria-hidden="true">SCM</span><span class="ticker__item" aria-hidden="true">Power BI</span><span class="ticker__item" aria-hidden="true">IoT / Edge</span>
+  </div>
+</div>
 
 <section class="section">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">The framework</span>
-      <h2>Three stages, one continuous loop</h2>
-      <p class="lede">Every engagement follows the same arc: converge the data, extract the insight, and close the loop with an action the plant can actually take.</p>
+      <h2>Three stages,<br>one continuous loop.</h2>
     </div>
     <div class="grid grid--3">
-
       <div class="pillar reveal">
-        <div class="pillar__head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/><path d="M4 11.5v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
-          <h3>Data Unification</h3>
-        </div>
-        <div class="pillar__body">
-          <div class="pillar__item"><b>Enterprise data convergence</b><p>Timeseries-based unification across ERP, CRM, SCM, MES and manufacturing systems &mdash; one spine instead of a dozen exports.</p></div>
-          <div class="pillar__item"><b>Sourcing &amp; processing</b><p>Raw signals land in the data lake; conformed, quality-checked data lands in the warehouse ready for BI and AI.</p></div>
-        </div>
+        <div class="pillar__head"><h3>Data Unification</h3></div>
+        <div class="pillar__item"><b>Enterprise data convergence</b><p>Timeseries-based unification across ERP, CRM, SCM, MES and manufacturing systems &mdash; one spine instead of a dozen exports.</p></div>
+        <div class="pillar__item"><b>Sourcing &amp; processing</b><p>Raw signals land in the data lake; conformed, quality-checked data lands in the warehouse ready for BI and AI.</p></div>
       </div>
-
       <div class="pillar reveal">
-        <div class="pillar__head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="2.6"/><circle cx="4" cy="5" r="2"/><circle cx="20" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M5.6 6.4 10 10.2M18.4 6.4 14 10.2M5.6 17.6 10 13.8M18.4 17.6 14 13.8"/></svg>
-          <h3>Insights from Unified Data</h3>
-        </div>
-        <div class="pillar__body">
-          <div class="pillar__item"><b>Integrated data pipeline</b><p>Ingestion from multiple sources, integrated with ERP and the systems of record that finance and operations already trust.</p></div>
-          <div class="pillar__item"><b>ML insights engine</b><p>Machine learning models unlock relationships across process parameters that manual analysis will not surface.</p></div>
-        </div>
+        <div class="pillar__head"><h3>Insights from Unified Data</h3></div>
+        <div class="pillar__item"><b>Integrated data pipeline</b><p>Ingestion from multiple sources, integrated with ERP and the systems of record that finance and operations already trust.</p></div>
+        <div class="pillar__item"><b>ML insights engine</b><p>Machine learning models unlock relationships across process parameters that manual analysis will not surface.</p></div>
       </div>
-
       <div class="pillar reveal">
-        <div class="pillar__head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.2 5.2l2.1 2.1M16.7 16.7l2.1 2.1M18.8 5.2l-2.1 2.1M7.3 16.7l-2.1 2.1"/><circle cx="12" cy="12" r="4.2"/></svg>
-          <h3>Actionable Intelligence</h3>
-        </div>
-        <div class="pillar__body">
-          <div class="pillar__item"><b>Real-time decision insights</b><p>Precise, relevant and timely enough that an operator or engineer can act on them inside the process window.</p></div>
-          <div class="pillar__item"><b>Insight to remediation</b><p>From detection through impact analysis to guided remediation &mdash; the loop closes on the line, not in a report.</p></div>
-        </div>
+        <div class="pillar__head"><h3>Actionable Intelligence</h3></div>
+        <div class="pillar__item"><b>Real-time decision insights</b><p>Precise, relevant and timely enough that an operator or engineer can act on them inside the process window.</p></div>
+        <div class="pillar__item"><b>Insight to remediation</b><p>From detection through impact analysis to guided remediation &mdash; the loop closes on the line, not in a report.</p></div>
       </div>
-
-    </div>
-
-    <div class="integrations reveal">
-      <h3 class="integrations__title">We plug into the systems you already run</h3>
-      <ul class="chips" role="list">
-        <li class="chip">PLC</li><li class="chip">SCADA</li><li class="chip">HMI</li>
-        <li class="chip">Plant Historian</li><li class="chip">MES</li><li class="chip">LIMS</li>
-        <li class="chip">ELN</li><li class="chip">ERP / D365</li><li class="chip">CRM</li>
-        <li class="chip">SCM</li><li class="chip">Power BI</li><li class="chip">IoT / Edge</li>
-      </ul>
-      <p class="integrations__note">No rip-and-replace. We read from and write back to the systems your teams already trust.</p>
     </div>
   </div>
 </section>
@@ -130,76 +107,106 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Services</span>
-      <h2>Five competencies that stack</h2>
-      <p class="lede">Most clients start with one and grow into the rest. Each is delivered as a working system with lineage, monitoring and handover &mdash; not a slide deck.</p>
+      <h2>What we build.</h2>
     </div>
-    <div class="grid grid--3">
-
-      <a class="card reveal" href="services.html#data-unification">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><ellipse cx="12" cy="5.5" rx="8" ry="3"/><path d="M4 5.5v12c0 1.7 3.6 3 8 3s8-1.3 8-3v-12"/><path d="M4 11.5c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></div>
+    <div class="index reveal">
+      <a class="index__row" href="services.html#data-unification">
+        <span class="index__num">01</span>
         <h3>Data Unification</h3>
-        <p>Converge plant historians, quality systems and enterprise records onto one timeseries spine that every downstream model can rely on.</p>
+        <p>One timeseries spine across historians, quality systems and enterprise records &mdash; so every downstream model has ground truth.</p>
+        <span class="index__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
       </a>
-
-      <a class="card reveal" href="services.html#data-engineering">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="2.5" y="3" width="19" height="5" rx="1"/><rect x="2.5" y="15.5" width="19" height="5" rx="1"/><path d="M7 8v7.5M17 8v7.5"/></svg></div>
+      <a class="index__row" href="services.html#data-engineering">
+        <span class="index__num">02</span>
         <h3>Data Engineering</h3>
-        <p>Medallion architectures, real-time streaming and connectors to LIMS, ELN, MES, Historian and D365 &mdash; with lineage and quality enforced end to end.</p>
+        <p>Medallion architectures, real-time streaming and connectors to LIMS, ELN, MES, Historian and D365 &mdash; lineage enforced end to end.</p>
+        <span class="index__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
       </a>
-
-      <a class="card reveal" href="services.html#business-intelligence">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M3 21h18"/><rect x="4" y="12" width="4" height="6"/><rect x="10" y="7.5" width="4" height="10.5"/><rect x="16" y="3.5" width="4" height="14.5"/></svg></div>
+      <a class="index__row" href="services.html#business-intelligence">
+        <span class="index__num">03</span>
         <h3>Business Intelligence</h3>
-        <p>Power BI dashboards and custom Plotly toolkits: shop-floor visualisation and executive KPI rollups fed from the same conformed data.</p>
+        <p>Power BI and custom Plotly toolkits: shop-floor visualisation and executive KPI rollups from the same conformed data.</p>
+        <span class="index__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
       </a>
-
-      <a class="card reveal" href="services.html#ai-ml">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="7.5" y="7.5" width="9" height="9" rx="1.5"/><path d="M10 2.5v5M14 2.5v5M10 16.5v5M14 16.5v5M2.5 10h5M2.5 14h5M16.5 10h5M16.5 14h5"/></svg></div>
+      <a class="index__row" href="services.html#ai-ml">
+        <span class="index__num">04</span>
         <h3>AI &amp; Machine Learning</h3>
-        <p>Predictive models, timeseries forecasting, computer vision and statistical analysis &mdash; from XGBoost on production lines to Nextflow pipelines for genomics.</p>
+        <p>Predictive models, timeseries forecasting, computer vision &mdash; from XGBoost on production lines to Nextflow pipelines for genomics.</p>
+        <span class="index__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
       </a>
-
-      <a class="card reveal" href="services.html#agentic-ai">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="3.5" r="2"/><circle cx="4.5" cy="18" r="2"/><circle cx="19.5" cy="18" r="2"/><path d="M12 5.5v3.5M10 14.2 6 16.6M14 14.2l4 2.4"/></svg></div>
+      <a class="index__row" href="services.html#agentic-ai">
+        <span class="index__num">05</span>
         <h3>Agentic AI</h3>
-        <p>MCP servers and multi-agent orchestration with three-layer, defence-in-depth allowlisting and a full audit trail. Production-grade &mdash; already shipped.</p>
+        <p>MCP servers and multi-agent orchestration with defence-in-depth allowlisting and a full audit trail. Already shipped, not a roadmap.</p>
+        <span class="index__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
       </a>
-
-      <a class="card reveal" href="approach.html">
-        <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 2.5 21 7v10l-9 4.5L3 17V7z"/><path d="M12 12 21 7M12 12v9.5M12 12 3 7"/></svg></div>
-        <h3>How we engage</h3>
-        <p>Discovery, experiment and implement &mdash; a consulting phase that defines the problem and the risk before a single model is built.</p>
-      </a>
-
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Industries</span>
-      <h2>Where our AI Solutions Framework has been applied</h2>
-      <p class="lede">Domain expertise is the hard part. We hold people from these industries on the team, which is what lets a model reach the control room instead of stopping at the data science notebook.</p>
+    <div class="rail-head section-head reveal">
+      <div>
+        <span class="eyebrow">Industries</span>
+        <h2 style="margin-bottom:0">Where it has shipped.</h2>
+      </div>
+      <span class="rail-hint">Scroll &rarr;</span>
     </div>
-    <div class="grid grid--3">
-      <div class="ind-card reveal"><div class="ind-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2.5 21h19M4 21V9l6 3.5V9l6 3.5V6l3.5-2v17"/><path d="M7 15.5h1.5M13 15.5h1.5"/></svg></div><h3>Metal Manufacturing</h3><p>Hot metal quality, alloy and scrap optimisation, caster defect detection and yield recovery across the melt-to-finish chain.</p><span class="ind-card__link textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span></div>
-      <div class="ind-card reveal"><div class="ind-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3s4.5 4.2 4.5 7.8A4.5 4.5 0 0 1 12 15.3a4.5 4.5 0 0 1-4.5-4.5C7.5 7.2 12 3 12 3z"/><path d="M3.5 21h17M5.5 21v-4.5h13V21"/></svg></div><h3>Heat Furnace Manufacturing</h3><p>Fuel and combustion optimisation, thermal profile control, refractory life prediction and emissions reduction.</p><span class="ind-card__link textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span></div>
-      <div class="ind-card reveal"><div class="ind-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="6" rx="1"/><path d="M12 9.5v4M6 20.5h12M8 13.5h8v3H8z"/></svg></div><h3>Sheet Molding Manufacturing</h3><p>Fibre uniformity from microscopy, cure-cycle optimisation and scrap reduction for thermoplastic and SMC composites.</p><span class="ind-card__link textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span></div>
-      <div class="ind-card reveal"><div class="ind-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M9 2.5h6M10.5 2.5v6L5 18.2A2.5 2.5 0 0 0 7.2 22h9.6a2.5 2.5 0 0 0 2.2-3.8L13.5 8.5v-6"/><path d="M7.5 14.5h9"/></svg></div><h3>Pharma &amp; Life Sciences</h3><p>Batch record analytics, deviation prediction, LIMS and ELN integration, and reproducible genomics pipelines.</p><span class="ind-card__link textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span></div>
-      <div class="ind-card reveal"><div class="ind-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 16.5v-3.2l2.2-5A2.5 2.5 0 0 1 7.5 6.5h9a2.5 2.5 0 0 1 2.3 1.8l2.2 5v3.2"/><path d="M3 16.5h18M6.5 16.5v2.5M17.5 16.5v2.5M5.5 12.5h13"/></svg></div><h3>Automobile</h3><p>Weld and paint defect vision, supplier quality analytics, warranty pattern mining and predictive maintenance.</p><span class="ind-card__link textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span></div>
-      <div class="ind-card reveal"><div class="ind-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21c0-8 5-13 16-13 0 9-5.5 13-11 13H4z"/><path d="M8 17c2.5-3.5 5.5-5.5 9-6.5"/></svg></div><h3>Renewable Biomass</h3><p>Feedstock variability compensation, torrefaction and pyrolysis yield optimisation, moisture and carbon accounting.</p><span class="ind-card__link textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span></div>
+  </div>
+  <div class="wrap">
+    <div class="rail reveal">
+      <a class="rail__tile" href="industries.html#metal">
+        <span class="uc-count">4 use cases</span>
+        <div class="rail__num">01</div>
+        <h3>Metal Manufacturing</h3>
+        <p>Hot metal quality, alloy and scrap optimisation, caster defect detection and yield recovery across the melt-to-finish chain.</p>
+        <span class="textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="rail__tile" href="industries.html#furnace">
+        <span class="uc-count">4 use cases</span>
+        <div class="rail__num">02</div>
+        <h3>Heat Furnace Manufacturing</h3>
+        <p>Fuel and combustion optimisation, thermal profile control, refractory life prediction and emissions reduction.</p>
+        <span class="textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="rail__tile" href="industries.html#molding">
+        <span class="uc-count">4 use cases</span>
+        <div class="rail__num">03</div>
+        <h3>Sheet Molding Manufacturing</h3>
+        <p>Fibre uniformity from microscopy, cure-cycle optimisation and scrap reduction for thermoplastic and SMC composites.</p>
+        <span class="textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="rail__tile" href="industries.html#pharma">
+        <span class="uc-count">4 use cases</span>
+        <div class="rail__num">04</div>
+        <h3>Pharma &amp; Life Sciences</h3>
+        <p>Batch record analytics, deviation prediction, LIMS and ELN integration, and reproducible genomics pipelines.</p>
+        <span class="textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="rail__tile" href="industries.html#automobile">
+        <span class="uc-count">4 use cases</span>
+        <div class="rail__num">05</div>
+        <h3>Automobile</h3>
+        <p>Weld and paint defect vision, supplier quality analytics, warranty pattern mining and predictive maintenance.</p>
+        <span class="textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+      </a>
+      <a class="rail__tile" href="industries.html#biomass">
+        <span class="uc-count">4 use cases</span>
+        <div class="rail__num">06</div>
+        <h3>Renewable Biomass</h3>
+        <p>Feedstock variability compensation, torrefaction and pyrolysis yield optimisation, moisture and carbon accounting.</p>
+        <span class="textlink">See use cases <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h13M12 5l7 7-7 7"/></svg></span>
+      </a>
     </div>
-    <p style="margin-top:34px"><a class="btn btn--outline" href="industries.html">All industries and use cases <span class="btn__arrow">&rarr;</span></a></p>
   </div>
 </section>
 
-<section class="section section--navy">
+<section class="section section--steel">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Why Spring &amp; River</span>
-      <h2>Consultants first, model builders second</h2>
-      <p class="lede">We believe in resolving business problems, not just delivering IT applications.</p>
+      <h2>Consultants first,<br>model builders second.</h2>
     </div>
     <div class="stat-strip reveal">
       <div><b>Faster</b><span>Ready-to-use frameworks across a large number of AI techniques &mdash; we select, adapt and get to testing sooner.</span></div>
@@ -209,31 +216,6 @@
     </div>
   </div>
 </section>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Spring & River",
-  "legalName": "Sprinriver Technology Private Limited",
-  "url": "https://springandriver.com/",
-  "email": "info@springandriver.com",
-  "telephone": "+91-9831164127",
-  "description": "Business Intelligence, AI and Machine Learning solutions for manufacturing and life sciences.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "7 Anthony Bagan Lane",
-    "addressLocality": "Kolkata",
-    "addressRegion": "West Bengal",
-    "postalCode": "700009",
-    "addressCountry": "IN"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/sprinriver-technology-private-limited",
-    "https://www.facebook.com/springandriver/"
-  ]
-}
-</script>
 <section class="cta-band">
   <div class="wrap">
     <div class="cta-band__inner reveal">
