@@ -16,6 +16,13 @@
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
   }
 
   /* ---- reveal on scroll ---- */
@@ -43,6 +50,35 @@
         }, 300);
       });
     }
+  }
+
+  /* ---- count-up stats ----
+     Numerals like "6" or "30+" tick up when they scroll into view. The final
+     text is set from the markup itself, so a failure anywhere leaves the
+     correct value in place. */
+  var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var stats = document.querySelectorAll('.hero__stat b, .stat-strip b');
+  if (stats.length && !reduced && 'IntersectionObserver' in window) {
+    var sio = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) { return; }
+        sio.unobserve(entry.target);
+        var final = entry.target.textContent;
+        var m = final.match(/^(\d+)(.*)$/);
+        if (!m) { return; }
+        var n = parseInt(m[1], 10), suffix = m[2], t0 = null;
+        var dur = 900;
+        var tick = function (t) {
+          if (!t0) { t0 = t; }
+          var k = Math.min((t - t0) / dur, 1);
+          k = 1 - Math.pow(1 - k, 3); /* ease-out cubic */
+          entry.target.textContent = Math.round(n * k) + suffix;
+          if (k < 1) { requestAnimationFrame(tick); } else { entry.target.textContent = final; }
+        };
+        requestAnimationFrame(tick);
+      });
+    }, { threshold: 0.6 });
+    stats.forEach(function (el) { sio.observe(el); });
   }
 
   /* ---- current year in footer ---- */
