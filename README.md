@@ -134,7 +134,21 @@ Pages on every push to the default branch. The workflow calls
 at the first successful run — no manual setting required.
 
 If Pages does not appear, check **Settings → Pages** and confirm the source is
-set to **GitHub Actions**.
+set to **GitHub Actions**. Until that setting is applied once by hand, the
+workflow cannot succeed: the Actions token is not permitted to create a Pages
+site, and the `deploy` job is rejected at the `github-pages` environment gate
+before it reaches a runner.
+
+### Netlify
+
+`netlify.toml` configures the Netlify deployment. There is no build step — the
+repository root is published as-is. The file also sets basic security headers
+and a one-week cache for images.
+
+`assets/css/styles.css` and `assets/js/main.js` are deliberately left on
+Netlify's default ETag revalidation rather than a long cache lifetime, because
+their filenames carry no content hash; caching them hard would strand returning
+visitors on a stale stylesheet after a design change.
 
 ### Custom domain
 
