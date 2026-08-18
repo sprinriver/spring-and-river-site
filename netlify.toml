@@ -32,3 +32,36 @@
   for = "/assets/img/*"
   [headers.values]
     Cache-Control = "public, max-age=604800"
+
+# --- Redirects ---------------------------------------------------------------
+# products.html carried the retired Texplicit product; send it home.
+# The *-old rules preserve inbound links to the previous site's URL scheme.
+[[redirects]]
+  from = "/products.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/about-us.html"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/methods.html"
+  to = "/approach.html"
+  status = 301
+
+[[redirects]]
+  from = "/use-cases.html"
+  to = "/industries.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact-us.html"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy_policy.html"
+  to = "/privacy-policy.html"
+  status = 301

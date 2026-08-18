@@ -10,12 +10,11 @@ one small script. Edit a file, push, and it is live.
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Home — hero, AI Solutions Framework, services, industries, differentiators |
+| `index.html` | Home — hero, AI Solutions Framework, services, industries, integrations, differentiators |
 | `services.html` | Five services, each with its use cases (`#data-unification`, `#data-engineering`, `#business-intelligence`, `#ai-ml`, `#agentic-ai`) |
 | `industries.html` | Six industries, each with four use cases (`#metal`, `#furnace`, `#molding`, `#pharma`, `#automobile`, `#biomass`) |
 | `approach.html` | Three-phase engagement approach |
 | `about.html` | Differentiators and leadership team |
-| `products.html` | Texplicit |
 | `contact.html` | Enquiry form and company details |
 | `privacy-policy.html` | Privacy policy |
 
