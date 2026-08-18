@@ -1,0 +1,34 @@
+# Netlify configuration for the Spring & River static site.
+#
+# The site is plain HTML with no build step, so there is no build command —
+# Netlify publishes the repository root exactly as it is committed.
+
+[build]
+  publish = "."
+
+# --- Security headers -------------------------------------------------------
+# Applied to every response. No Content-Security-Policy is set here on purpose:
+# the pages carry a small inline <script> and inline style attributes, so a
+# useful CSP would need 'unsafe-inline' (which gives up most of the benefit) or
+# per-file hashes (which silently break the site the next time a page is
+# edited). The headers below are the ones that are unambiguously safe here.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# --- Caching ----------------------------------------------------------------
+# Images and the favicon are versionless but change rarely, so a week of
+# caching is safe.
+#
+# styles.css and main.js are deliberately NOT given a long max-age. Their
+# filenames carry no content hash, so an aggressive cache would leave returning
+# visitors on a stale stylesheet after every design change. Netlify's default
+# ETag revalidation is the correct behaviour for them.
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
