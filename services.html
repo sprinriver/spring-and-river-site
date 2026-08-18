@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | Spring &amp; River</title>
+<meta name="description" content="Data unification, data engineering, business intelligence, AI and machine learning, and production-grade agentic AI — with the use cases each one delivers.">
+<meta name="author" content="Sprinriver Technology Private Limited">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Spring &amp; River">
+<meta property="og:title" content="Services | Spring &amp; River">
+<meta property="og:description" content="Data unification, data engineering, business intelligence, AI and machine learning, and production-grade agentic AI — with the use cases each one delivers.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<script>document.documentElement.className += " js";</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html">
+      <img class="brand__mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+      <span class="brand__name">Spring &amp; <em>River</em></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav"><span></span></button>
+    <nav class="nav" id="site-nav">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="approach.html">Approach</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a class="btn btn--primary header-cta" href="contact.html">Talk to us</a>
+    </nav>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Services</div>
+    <h1>What we build, and what it changes</h1>
+    <p class="lede">Five competencies, each delivered as a running system. Every use case below is one we can scope against your own data in a feasibility study before you commit to a build.</p>
+  </div>
+</section>
+
+<nav class="jumpnav" aria-label="Services">
+  <div class="wrap jumpnav__inner">
+    <a href="#data-unification">01 &nbsp;Data Unification</a>
+    <a href="#data-engineering">02 &nbsp;Data Engineering</a>
+    <a href="#business-intelligence">03 &nbsp;Business Intelligence</a>
+    <a href="#ai-ml">04 &nbsp;AI &amp; Machine Learning</a>
+    <a href="#agentic-ai">05 &nbsp;Agentic AI</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <section class="service" id="data-unification">
+    <div class="service__grid">
+      <div class="service__meta reveal">
+        <div class="service__no">01</div>
+        <h2>Data Unification</h2>
+        <p>Plants rarely have a data problem in the sense of "not enough". They have a convergence problem: the historian, the LIMS, the quality register and the ERP each hold part of the answer, on different clocks, with different keys.</p>
+        <p>We build the timeseries spine that joins them &mdash; so a quality result can be traced back to the exact process conditions that produced it.</p>
+        <div class="service__tags">
+          <span class="tag">ERP</span><span class="tag">CRM</span><span class="tag">SCM</span><span class="tag">MES</span><span class="tag">Historian</span><span class="tag">Data Lake</span><span class="tag">DWH</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="usecase">
+          <h4><span class="uc-id">UC-01</span> Enterprise data convergence</h4>
+          <p>Timeseries-based unification across ERP, CRM, SCM and manufacturing sources. Process tags, batch genealogy and order records are aligned to a common time and asset model, so a single query can span the shop floor and the back office.</p>
+          <span class="usecase__outcome">One traceable record per batch, heat or lot</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-02</span> Data sourcing &amp; processing</h4>
+          <p>Raw signals are landed in a data lake at full fidelity; conformed, deduplicated and quality-checked data is published to the warehouse for BI and AI consumption. Nothing is thrown away, and nothing unvalidated reaches a dashboard.</p>
+          <span class="usecase__outcome">Raw fidelity preserved, trusted layer published</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-03</span> Contextualising sensor data</h4>
+          <p>A tag named <code>TI_4471</code> means nothing to a model. We attach asset hierarchy, units, engineering limits and product context to every signal so that features carry physical meaning and models stay interpretable to the process engineer.</p>
+          <span class="usecase__outcome">Models a process engineer can argue with</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-04</span> Master data reconciliation</h4>
+          <p>Product codes, customer records and material grades drift apart across systems over years of operation. We reconcile them into conformed dimensions, which is usually the unglamorous step that makes every later number agree.</p>
+          <span class="usecase__outcome">Finance and operations quote the same figure</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service" id="data-engineering">
+    <div class="service__grid">
+      <div class="service__meta reveal">
+        <div class="service__no">02</div>
+        <h2>Data Engineering</h2>
+        <p>The foundation. Pipelines that run unattended, fail loudly, and can be traced from a number on a dashboard back to the instrument that produced it.</p>
+        <p>We work to medallion architectures &mdash; bronze, silver, gold &mdash; with lineage and data quality enforced end to end rather than bolted on afterwards.</p>
+        <div class="service__tags">
+          <span class="tag">Medallion</span><span class="tag">Streaming</span><span class="tag">LIMS</span><span class="tag">ELN</span><span class="tag">MES</span><span class="tag">D365</span><span class="tag">Lineage</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="usecase">
+          <h4><span class="uc-id">UC-05</span> Medallion architecture build-out</h4>
+          <p>Bronze holds raw arrivals, silver holds cleaned and conformed entities, gold holds the business-ready marts. Each promotion is tested, versioned and reversible, so a bad upstream day does not quietly corrupt a year of reporting.</p>
+          <span class="usecase__outcome">Reproducible, auditable transformations</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-06</span> Real-time streaming ingestion</h4>
+          <p>Streaming from PLC, SCADA and HMI layers through a streaming server into a staging database, so that models score against conditions measured seconds ago rather than a nightly extract.</p>
+          <span class="usecase__outcome">Insight inside the process window</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-07</span> System connectors</h4>
+          <p>Purpose-built connectors to LIMS, ELN, MES, plant Historian and Dynamics 365. Instrument and laboratory systems are treated as first-class sources, not manual CSV exports maintained by one person.</p>
+          <span class="usecase__outcome">Manual export steps eliminated</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-08</span> Data quality &amp; lineage enforcement</h4>
+          <p>Automated expectations on ranges, freshness, completeness and referential integrity, with column-level lineage. When a KPI moves, you can tell within minutes whether the process changed or the pipeline did.</p>
+          <span class="usecase__outcome">Fewer false alarms, faster root cause</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service" id="business-intelligence">
+    <div class="service__grid">
+      <div class="service__meta reveal">
+        <div class="service__no">03</div>
+        <h2>Business Intelligence</h2>
+        <p>The visibility layer. The same conformed data feeds operational, management and leadership views &mdash; so a shift supervisor and the board are looking at consistent numbers at different resolutions.</p>
+        <p>We build in Power BI where the estate is Microsoft, and in custom Plotly toolkits where the visualisation is too specialised for an off-the-shelf tile.</p>
+        <div class="service__tags">
+          <span class="tag">Power BI</span><span class="tag">Plotly</span><span class="tag">KPI rollups</span><span class="tag">Shop floor</span><span class="tag">Executive</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="usecase">
+          <h4><span class="uc-id">UC-09</span> Shop-floor visualisation</h4>
+          <p>Line-side displays built for glanceability under production conditions: current state, drift against spec, and the one or two variables most responsible. Designed for a decision in seconds, not an analysis session.</p>
+          <span class="usecase__outcome">Operators act without leaving the line</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-10</span> Executive KPI rollups</h4>
+          <p>Yield, OEE, energy intensity, first-pass quality and cost per tonne rolled up across lines, plants and regions &mdash; drillable from a group number down to the individual batch that moved it.</p>
+          <span class="usecase__outcome">One version of the truth, all the way down</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-11</span> Custom analytical toolkits</h4>
+          <p>Where standard chart types fail &mdash; microstructure overlays, multi-variate process envelopes, batch trajectory comparison &mdash; we build bespoke interactive tools that domain specialists actually want to open.</p>
+          <span class="usecase__outcome">Analysis that matches the physics</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-12</span> Self-service semantic layer</h4>
+          <p>A governed model with agreed definitions and business logic, so that analysts across departments can answer their own questions without each rebuilding "yield" a slightly different way.</p>
+          <span class="usecase__outcome">Analyst throughput without metric sprawl</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service" id="ai-ml">
+    <div class="service__grid">
+      <div class="service__meta reveal">
+        <div class="service__no">04</div>
+        <h2>AI &amp; Machine Learning</h2>
+        <p>The intelligence. Predictive models, timeseries analysis, computer vision and classical statistics &mdash; chosen for the problem rather than for novelty.</p>
+        <p>We have shipped gradient-boosted models onto production lines and Nextflow pipelines for genomics. The technique matters less than whether the result survives contact with the plant.</p>
+        <div class="service__tags">
+          <span class="tag">XGBoost</span><span class="tag">Timeseries</span><span class="tag">Computer vision</span><span class="tag">Deep learning</span><span class="tag">NLP</span><span class="tag">Nextflow</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="usecase">
+          <h4><span class="uc-id">UC-13</span> Process parameter optimisation</h4>
+          <p>Models relate masses of historical sensor data to the output quality recorded in factory registers and quality audits. The compliant operating ranges for each parameter are established, then process control is held inside them.</p>
+          <span class="usecase__outcome">Consistent output quality and higher productivity</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-14</span> Predictive maintenance</h4>
+          <p>Instead of correcting failures after they occur or over-servicing on a fixed calendar, intelligent algorithms predict equipment failure from inspection records, usage, environmental data, controllers and IoT devices.</p>
+          <span class="usecase__outcome">Less downtime and less unnecessary maintenance</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-15</span> Computer vision for quality</h4>
+          <p>Deep learning on microscopy and inspection imagery: identifying constituents, textures and defects, annotating a training sample, then scoring every part against the tolerance limits that define acceptable product.</p>
+          <span class="usecase__outcome">Defects caught before value is added</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-16</span> Demand &amp; energy forecasting</h4>
+          <p>Timeseries models forecast power and utility demand against production targets, then recommend which combination of assets &mdash; boilers, turbines, furnaces of differing capacities &mdash; should be run to meet it at lowest cost.</p>
+          <span class="usecase__outcome">Measurable fuel and energy savings</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-17</span> NLP &amp; document intelligence</h4>
+          <p>Extraction of qualitative information, opinions, numerical data and tables from unstructured text &mdash; maintenance logs, deviation reports, SOPs and correspondence &mdash; turning written records into analysable fields.</p>
+          <span class="usecase__outcome">Unstructured archives become queryable</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service" id="agentic-ai">
+    <div class="service__grid">
+      <div class="service__meta reveal">
+        <div class="service__no">05</div>
+        <h2>Agentic AI</h2>
+        <p>The interaction layer. MCP servers and multi-agent orchestration, built to production standards with three-layer defence-in-depth allowlisting and a full audit trail on every action.</p>
+        <p>This is shipped work, not a roadmap item &mdash; which means it comes with the boring parts: permissioning, logging, rollback and human approval gates.</p>
+        <div class="service__tags">
+          <span class="tag">MCP servers</span><span class="tag">Multi-agent</span><span class="tag">Allowlisting</span><span class="tag">Audit trail</span><span class="tag">OCR</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="usecase">
+          <h4><span class="uc-id">UC-18</span> MCP servers over plant systems</h4>
+          <p>Model Context Protocol servers expose historians, warehouses and document stores to AI assistants under explicit, reviewable permissions &mdash; so a question in natural language resolves against governed data rather than a copied spreadsheet.</p>
+          <span class="usecase__outcome">Ask the plant a question, get a sourced answer</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-19</span> Multi-agent orchestration</h4>
+          <p>Specialised agents for retrieval, analysis, validation and reporting, coordinated so that each step is checked before the next. Every tool call passes a three-layer allowlist and is written to an immutable audit log.</p>
+          <span class="usecase__outcome">Automation you can hand to an auditor</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-20</span> AI agents for OCR &amp; document workflows</h4>
+          <p>Agents that read scanned certificates, batch records, mill test reports and supplier documentation, extract the fields that matter, validate them against the system of record and flag the exceptions for a human.</p>
+          <span class="usecase__outcome">Hours of manual keying removed per week</span>
+        </div>
+        <div class="usecase">
+          <h4><span class="uc-id">UC-21</span> Guided remediation assistants</h4>
+          <p>When a deviation is detected, the assistant assembles the context &mdash; comparable past events, what was done, what worked &mdash; and proposes a remediation path with its reasoning visible for the engineer to accept or reject.</p>
+          <span class="usecase__outcome">Expertise available on every shift</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+<section class="cta-band">
+  <div class="wrap">
+    <div class="cta-band__inner reveal">
+      <div>
+        <h2>Bring us a process problem, not a data project.</h2>
+        <p>Tell us where the losses are — yield, energy, quality, downtime — and we will scope a feasibility study on your own data before anyone commits to a build.</p>
+      </div>
+      <a class="btn btn--primary" href="contact.html">Start a conversation <span class="btn__arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="brand">
+          <img class="brand__mark" src="assets/img/logo.svg" alt="" width="34" height="34">
+          <span class="brand__name">Spring &amp; <em>River</em></span>
+        </span>
+        <p>Business Intelligence, AI and Machine Learning solutions for manufacturing and life sciences. Production-grade, not proof-of-concept.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="approach.html">Approach</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>What We Do</h4>
+        <ul>
+          <li><a href="services.html#data-unification">Data Unification</a></li>
+          <li><a href="services.html#data-engineering">Data Engineering</a></li>
+          <li><a href="services.html#business-intelligence">Business Intelligence</a></li>
+          <li><a href="services.html#ai-ml">AI &amp; Machine Learning</a></li>
+          <li><a href="services.html#agentic-ai">Agentic AI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Sprinriver Technology Private Limited<br>
+        7 Anthony Bagan Lane, Kolkata,<br>West Bengal, India, PIN 700009</p>
+        <p><a href="tel:+919831164127">+91 98311 64127</a><br>
+        <a href="mailto:info@springandriver.com">info@springandriver.com</a></p>
+        <div class="social">
+          <a href="https://www.linkedin.com/company/sprinriver-technology-private-limited" aria-label="LinkedIn" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0zM.4 8.4h4.2V24H.4zM8.5 8.4h4v2.1h.06c.56-1.06 1.93-2.18 3.98-2.18 4.25 0 5.04 2.8 5.04 6.44V24h-4.2v-7.4c0-1.77-.03-4.04-2.46-4.04-2.47 0-2.85 1.92-2.85 3.91V24H8.5z"/></svg></a>
+          <a href="https://www.facebook.com/springandriver/" aria-label="Facebook" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2026</span> SPRINRIVER Technology Private Limited. All rights reserved.</span>
+      <span><a href="privacy-policy.html">Privacy Policy</a></span>
+    </div>
+  </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
