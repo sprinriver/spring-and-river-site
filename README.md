@@ -21,7 +21,7 @@ one small script. Edit a file, push, and it is live.
 ## Assets
 
 ```
-assets/css/styles.css   design system — all colours live in :root custom properties
+assets/css/styles.css   dark editorial design system — colours live in :root custom properties
 assets/js/main.js       mobile nav, scroll reveal, contact-form mailto handoff
 assets/img/             logo and favicon (SVG)
 ```
