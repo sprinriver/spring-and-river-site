@@ -25,6 +25,24 @@
     });
   }
 
+  /* ---- theme toggle ---- */
+  var themeBtn = document.querySelector('.theme-toggle');
+  if (themeBtn) {
+    var setLabel = function () {
+      var light = document.documentElement.getAttribute('data-theme') === 'light';
+      themeBtn.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+    };
+    setLabel();
+    themeBtn.addEventListener('click', function () {
+      var root = document.documentElement;
+      var toLight = root.getAttribute('data-theme') !== 'light';
+      if (toLight) { root.setAttribute('data-theme', 'light'); }
+      else { root.removeAttribute('data-theme'); }
+      try { localStorage.setItem('theme', toLight ? 'light' : 'dark'); } catch (e) {}
+      setLabel();
+    });
+  }
+
   /* ---- reveal on scroll ---- */
   var items = document.querySelectorAll('.reveal');
   if (items.length) {
@@ -38,17 +56,26 @@
             io.unobserve(entry.target);
           }
         });
-      }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+      }, { threshold: 0, rootMargin: '0px 0px 250px 0px' });
       items.forEach(function (el) { io.observe(el); });
 
-      window.addEventListener('load', function () {
+      /* Safety sweep: IntersectionObserver callbacks can lag behind very
+         fast scrolling (scrollbar drags, keyboard End). Sweep any unrevealed
+         element that is already on screen, at most every 300ms. */
+      var sweeping = false;
+      var sweep = function () {
+        if (sweeping) { return; }
+        sweeping = true;
         setTimeout(function () {
+          sweeping = false;
           document.querySelectorAll('.reveal:not(.is-visible)').forEach(function (el) {
             var r = el.getBoundingClientRect();
-            if (r.top < window.innerHeight && r.bottom > 0) { el.classList.add('is-visible'); }
+            if (r.top < window.innerHeight + 250 && r.bottom > 0) { el.classList.add('is-visible'); }
           });
         }, 300);
-      });
+      };
+      window.addEventListener('scroll', sweep, { passive: true });
+      window.addEventListener('load', sweep);
     }
   }
 
