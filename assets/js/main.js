@@ -80,27 +80,49 @@
   }
 
   /* ---- count-up stats ----
-     Numerals like "6" or "30+" tick up when they scroll into view. The final
-     text is set from the markup itself, so a failure anywhere leaves the
-     correct value in place. */
+     Numerals like "6" or "30+" tick up when they scroll into view.
+
+     The markup is the source of truth and is restored verbatim when the
+     animation ends, bails out, or stalls. That matters for three reasons:
+       - the value may contain elements (e.g. <b>30<i>+</i></b>) that a
+         textContent write would flatten;
+       - requestAnimationFrame is paused in background tabs, so without a
+         timeout an interrupted run would strand the number mid-count;
+       - a JS-rendering crawler must never capture a placeholder "0".
+     Nothing is written until the first real frame, so a browser that never
+     schedules one simply keeps the server-rendered number. */
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var stats = document.querySelectorAll('.hero__stat b, .stat-strip b');
   if (stats.length && !reduced && 'IntersectionObserver' in window) {
     var sio = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) { return; }
-        sio.unobserve(entry.target);
-        var final = entry.target.textContent;
-        var m = final.match(/^(\d+)(.*)$/);
+        var el = entry.target;
+        sio.unobserve(el);
+
+        var original = el.innerHTML;
+        var m = el.textContent.match(/^(\d+)(.*)$/);
         if (!m) { return; }
-        var n = parseInt(m[1], 10), suffix = m[2], t0 = null;
+        if (document.hidden) { return; }   /* leave the real number as-is */
+
+        var n = parseInt(m[1], 10), suffix = m[2], t0 = null, done = false;
         var dur = 900;
+        var finish = function () {
+          if (done) { return; }
+          done = true;
+          el.innerHTML = original;
+        };
+        /* Safety net: whatever happens to the frame loop, the correct value
+           is back well before anyone notices. */
+        var guard = setTimeout(finish, dur + 1200);
         var tick = function (t) {
+          if (done) { return; }
           if (!t0) { t0 = t; }
           var k = Math.min((t - t0) / dur, 1);
           k = 1 - Math.pow(1 - k, 3); /* ease-out cubic */
-          entry.target.textContent = Math.round(n * k) + suffix;
-          if (k < 1) { requestAnimationFrame(tick); } else { entry.target.textContent = final; }
+          if (k >= 1) { clearTimeout(guard); finish(); return; }
+          el.textContent = Math.round(n * k) + suffix;
+          requestAnimationFrame(tick);
         };
         requestAnimationFrame(tick);
       });
