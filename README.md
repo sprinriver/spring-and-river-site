@@ -23,7 +23,7 @@ one small script. Edit a file, push, and it is live.
 ```
 assets/css/styles.css   dark editorial design system — colours live in :root custom properties
 assets/js/main.js       mobile nav, theme toggle, scroll reveal, contact-form mailto handoff
-assets/img/             logo and favicon (SVG)
+assets/img/             logo, favicon, OG card, touch icon
 ```
 
 ## Running it locally (Windows)
@@ -107,11 +107,18 @@ two. Watch it under the repository's **Actions** tab.
 ## Editing
 
 **Colours and type** are CSS custom properties at the top of
-`assets/css/styles.css`. Dark is the default theme; the light palette lives in
-the `[data-theme="light"]` block and the header toggle switches between them,
-persisting the choice in `localStorage`. Amber used *as text* goes through
-`--accent-text` (which darkens in light mode for contrast) — only backgrounds
-and bars use `--amber` directly.
+`assets/css/styles.css`. The palette is sampled from the Spring & River logo
+and site: `#1A237E` indigo (the letterform), `#42A5F5` azure (the flowing
+stroke), `#FFCB14` yellow (the Contact CTA), on an indigo-black ground.
+
+Blue carries the brand — eyebrows, links, accents, the hero accent word.
+Yellow is reserved for actions (buttons), the way the CTA button is on
+springandriver.com. Text-coloured accents go through `--accent-text` so they
+can darken in light mode for contrast; `--amber` is only ever a background.
+
+Dark is the default theme; the light palette lives in the `[data-theme="light"]`
+block and the header toggle switches between them, persisting the choice in
+`localStorage`.
 
 **Navigation and footer** are duplicated in the `<header>` / `<footer>` of each
 page. If you add a page, update those blocks in all eight files.
