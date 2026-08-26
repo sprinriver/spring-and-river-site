@@ -5,34 +5,36 @@
    ========================================================================== */
 
 :root {
-  /* ground */
-  --ink-0: #060B14;   /* page */
-  --ink-1: #0A1322;   /* raised band */
-  --ink-2: #111C30;   /* raised element / hover */
+  /* ground — indigo-black, derived from the logo's #1A237E */
+  --ink-0: #05071C;   /* page */
+  --ink-1: #0B0E2E;   /* raised band */
+  --ink-2: #151A45;   /* raised element / hover */
   --paper: #F4F2EC;   /* warm off-white counter-band */
 
-  /* brand */
-  --amber:     #FFCE1B;
-  --amber-hi:  #FFDE5C;
-  --blue:      #4187D1;
-  --blue-deep: #1B4F9C;
+  /* brand — sampled from the Spring & River logo and site
+     #1A237E indigo letterform · #42A5F5 azure echo · #FFCB14 CTA yellow */
+  --amber:     #FFCB14;
+  --amber-hi:  #FFDA52;
+  --blue:      #42A5F5;   /* azure — the logo's bright stroke */
+  --blue-deep: #1A237E;   /* indigo — the logo's dark stroke */
+  --indigo:    #090C8C;   /* the brand's saturated hero blue */
 
   /* type */
-  --t-hi:  #EDF2F9;   /* headings */
-  --t-mid: #A9B9CE;   /* body */
-  --t-low: #71839C;   /* captions */
+  --t-hi:  #EEF1FB;   /* headings */
+  --t-mid: #A8B0D6;   /* body */
+  --t-low: #6E77A8;   /* captions */
 
   /* amber that is readable AS TEXT on the current ground; the graphic amber
      (buttons, bars) stays --amber in both themes */
-  --accent-text: var(--amber);
+  --accent-text: var(--blue);
   /* ink used ON amber surfaces — constant across themes */
-  --on-amber: #071018;
+  --on-amber: #0B0E2E;
 
-  --header-bg: rgba(6, 11, 20, .82);
-  --glow-blue: rgba(27, 79, 156, .35);
+  --header-bg: rgba(5, 7, 28, .84);
+  --glow-blue: rgba(9, 12, 140, .55);
 
-  --hairline: rgba(237, 242, 249, .12);
-  --hairline-strong: rgba(237, 242, 249, .22);
+  --hairline: rgba(168, 176, 214, .16);
+  --hairline-strong: rgba(168, 176, 214, .28);
   color-scheme: dark;
 
   --font-display: "Space Grotesk", "Inter", -apple-system, "Segoe UI", sans-serif;
@@ -46,18 +48,18 @@
 
 /* ---------- light theme ---------- */
 [data-theme="light"] {
-  --ink-0: #F7F7F3;
+  --ink-0: #F6F7FC;
   --ink-1: #FFFFFF;
-  --ink-2: #E9ECE6;
-  --t-hi:  #0C1524;
-  --t-mid: #45536A;
-  --t-low: #66738A;
-  --accent-text: #7A6200;
-  --blue: #1B4F9C;
-  --header-bg: rgba(247, 247, 243, .85);
-  --glow-blue: rgba(27, 79, 156, .10);
-  --hairline: rgba(12, 21, 36, .12);
-  --hairline-strong: rgba(12, 21, 36, .24);
+  --ink-2: #E8EBF7;
+  --t-hi:  #1B2055;   /* the wordmark's indigo */
+  --t-mid: #454E7C;
+  --t-low: #6B739C;
+  --accent-text: #1A237E;
+  --blue: #1565C0;
+  --header-bg: rgba(246, 247, 252, .88);
+  --glow-blue: rgba(9, 12, 140, .10);
+  --hairline: rgba(27, 32, 85, .14);
+  --hairline-strong: rgba(27, 32, 85, .26);
   color-scheme: light;
 }
 
@@ -147,7 +149,7 @@ li { margin-bottom: .45em; }
 .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 78px; }
 .brand { display: flex; align-items: center; gap: 12px; color: var(--t-hi); font-family: var(--font-display); font-weight: 600; letter-spacing: -.02em; font-size: 1.15rem; }
 .brand__mark { width: 36px; height: 36px; flex: none; }
-.brand__name em { font-style: normal; color: var(--amber); }
+.brand__name em { font-style: normal; color: var(--blue); }
 
 .nav { display: flex; align-items: center; gap: 2px; }
 .nav a {
@@ -203,7 +205,7 @@ li { margin-bottom: .45em; }
 }
 .hero > .wrap { position: relative; z-index: 2; }
 .hero h1 { max-width: 15ch; margin-bottom: .35em; }
-.hero h1 .accent { color: var(--amber); }
+.hero h1 .accent { color: var(--blue); }
 .hero__lede { font-size: clamp(1.08rem, 1.7vw, 1.3rem); color: var(--t-mid); max-width: 52ch; margin-bottom: 40px; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; }
 .hero__stats { display: flex; flex-wrap: wrap; gap: clamp(28px, 5vw, 72px); margin-top: clamp(48px, 7vh, 84px); padding-top: 34px; border-top: 1px solid var(--hairline); }
